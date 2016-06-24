@@ -205,7 +205,7 @@ Successfully enabled System Integrity Protection. Please restart the machine <sp
 </div>
 <div class="section" id="load-the-kext">
 <h2 id="load-the-kext">Load the KEXT</h2>
-<p>All KEXTs need to be owned by root:wheel before being loaded. So we verify this and load the kext. Once it's loaded, we can make sure it's running by usign kextstat.</p>
+<p>All KEXTs need to be owned by root:wheel before being loaded. So we verify this and load the kext. Once it's loaded, we can make sure it's running by using kextstat.</p>
 <div class="highlight"><pre><span></span>$ sudo chown -R root:wheel TESTKEXT.kext
 $ sudo kextload TESTKEXT.kext
 $ kextstat <span class="p">|</span> grep -i <span class="nb">test</span>
