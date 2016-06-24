@@ -1,0 +1,5 @@
+1. Make the necessary changes
+2. make html
+3. ghp-import output  
+4. git checkout master
+5. git merge -X theirs gh-pages
