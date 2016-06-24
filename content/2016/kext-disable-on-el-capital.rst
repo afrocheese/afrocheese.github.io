@@ -44,7 +44,7 @@ Once in Recovery Mode, bring up Terminal
 
 Load the KEXT
 -------------
-All KEXTs need to be owned by root:wheel before being loaded. So we verify this and load the kext. Once it's loaded, we can make sure it's running by usign kextstat.
+All KEXTs need to be owned by root:wheel before being loaded. So we verify this and load the kext. Once it's loaded, we can make sure it's running by using kextstat.
 
 .. code-block:: bash
 
