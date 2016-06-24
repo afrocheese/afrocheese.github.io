@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Charles Holmes" />
+        <meta name="keywords" content="android" />
+        <meta name="description" content="Let&#39;s disable some kext" />
+
+
+    <title>Disable KEXT Validation on El Capitan (10.11) - afrocheese</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/github.css" rel="stylesheet" />
+    
+    <link href="/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="afrocheese ATOM Feed" />
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small" class="twitchy-background">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="afrocheese" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/archives.html" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="https://github.com/afrocheese" title="Github"><i class="fa fa-github-square fa-lg padding-small"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/afrocheese" title="Twitter"><i class="fa fa-twitter-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper" class="twitchy-background">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            afrocheese
+                    </a>
+                </li>
+                    <li>
+                        <a href="/archives.html">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="https://github.com/afrocheese" title="Github">
+                            <i class="fa fa-github-square fa-lg padding-small"></i>
+                            Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/afrocheese" title="Twitter">
+                            <i class="fa fa-twitter-square fa-lg padding-small"></i>
+                            Twitter
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li class="active">
+                        <a href="/category/android.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            android
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-9">
+                <header class="page-header">
+                    <h1>
+                        <a href="/disable-kext-validation-on-el-capitan-1011.html"
+                           rel="bookmark"
+                           title="Permalink to Disable KEXT Validation on El Capitan (10.11)">
+                            Disable KEXT Validation on El Capitan (10.11)
+                        </a>
+                        <small>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2016-06-24T00:00:00-05:00"> Fri 24 June 2016</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/android.html">android</a>
+            </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/android.html">android</a>            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="entry-content">
+                    <div class="section" id="introduction">
+<h2 id="introduction">Introduction</h2>
+<p>OS X has recently made it more difficult to load arbitrary KEXT which is great for security, but it's very annoying when you're trying to developer a driver.</p>
+</div>
+<div class="section" id="sign-the-kext">
+<h2 id="sign-the-kext">Sign the KEXT</h2>
+<p>Often the KEXT won't be signed due to XCode restricting that behavior. It's often easier to just sign it with your own certificate, but you need to create that certificate first. Launch Keychain Access, select the "Keychain Access" menu, "Certificate Assistant" menu, and "Create a Certificate..." option.</p>
+<div class="figure align-center">
+<img alt="example of creating a certificate" src="/static/kext/kext-create-certificate.png" style="width: 75%;"/>
+</div>
+<p>To manually sign the kext, run the command below.</p>
+<div class="highlight"><pre><span></span>$ codesign -fs <span class="s2">"KEXTSigner"</span> TESTKEXT.kext/Contents/MacOS/TESTKEXT
+TESTKEXT.kext/Contents/MacOS/TESTKEXT: replacing existing signature
+</pre></div>
+</div>
+<div class="section" id="enable-kext-loading">
+<h2 id="enable-kext-loading">Enable KEXT Loading</h2>
+<p>The first step is to boot into recovery mode (instructions: <a class="reference external" href="https://support.apple.com/en-us/HT201314">https://support.apple.com/en-us/HT201314</a>). tldr; Reboot and hold Command+r.</p>
+<p>Once in Recovery Mode, bring up Terminal</p>
+<div class="highlight"><pre><span></span>$ csrutil disable
+Successfully disabled System Integrity Protection. Please restart the machine <span class="k">for</span> the changes to take effect.
+$ csrutil <span class="nb">enable</span> --without kext
+csrutil: requesting an unsupported configuration. This is likely to <span class="nb">break</span> in the future and leave your machine in an unknown state.
+Successfully enabled System Integrity Protection. Please restart the machine <span class="k">for</span> the changes to take effect.
+</pre></div>
+</div>
+<div class="section" id="load-the-kext">
+<h2 id="load-the-kext">Load the KEXT</h2>
+<p>All KEXTs need to be owned by root:wheel before being loaded. So we verify this and load the kext. Once it's loaded, we can make sure it's running by usign kextstat.</p>
+<div class="highlight"><pre><span></span>$ sudo chown -R root:wheel TESTKEXT.kext
+$ sudo kextload TESTKEXT.kext
+$ kextstat <span class="p">|</span> grep -i <span class="nb">test</span>
+<span class="m">154</span>    <span class="m">0</span> 0xffffff7f82f42000 0x5000     0x5000     test.usb_device <span class="o">(</span>1<span class="o">)</span> ABCDEF-1234-5678-ABCDEFGHIJKL &lt;<span class="m">15</span> <span class="m">4</span> 3&gt;
+</pre></div>
+</div>
+
+                </div>
+                <footer class="text-right">
+                    <p>- Charles Holmes</p>
+                </footer>
+            </div>
+    <div id="scrollspy">
+        <div class="col-lg-3 nav nav-stacked hidden-xs hidden-sm" data-spy="affix" data-offset-top="135">
+            <div id="toc"><ul><li><a class="toc-href" href="#" title="Disable KEXT Validation on El Capitan (10.11)">Disable KEXT Validation on El Capitan (10.11)</a><ul><li><a class="toc-href" href="#introduction" title="Introduction">Introduction</a></li><li><a class="toc-href" href="#sign-the-kext" title="Sign the KEXT">Sign the KEXT</a></li><li><a class="toc-href" href="#enable-kext-loading" title="Enable KEXT Loading">Enable KEXT Loading</a></li><li><a class="toc-href" href="#load-the-kext" title="Load the KEXT">Load the KEXT</a></li></ul></li></ul></div>
+        </div>
+    </div>
+        </div>
+    </article>
+</section>
+<footer>
+    <hr>
+    <div class="row">
+        <div class="col-lg-9 text-center">
+            <p><small>
+                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
+                &middot;                    &copy; 2016 Charles Holmes
+            </small></p>
+        </div>
+    </div>
+</footer>            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.2 -->
+    <script src="/theme/js/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- twitchy Script -->
+    <script src="/theme/js/pelican_twitchy.min.js"></script>
+
+</body>
+</html>
