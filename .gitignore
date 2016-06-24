@@ -1,0 +1,8 @@
+## python virtual environment files
+ENV/
+
+## python tmp files
+*.pyc
+
+## pelican generated files
+output/
