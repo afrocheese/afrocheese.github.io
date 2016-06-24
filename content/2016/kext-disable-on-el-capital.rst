@@ -10,7 +10,7 @@ Disable KEXT Validation on El Capitan (10.11)
 
 Introduction
 ------------
-OS X has recently made it more difficult to load arbitrary KEXT which is great for security, but it's very annoying when you're trying to developer a driver. 
+OS X has recently made it more difficult to load arbitrary KEXT which is great for security, but it's very annoying when you're trying to develop a driver. 
 
 Sign the KEXT
 -------------
